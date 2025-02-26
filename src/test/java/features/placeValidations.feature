@@ -1,4 +1,6 @@
 Feature: Validating Place API's
+
+  @AddPlace
   Scenario Outline: Verify if the place is being successfully added using AddPlaceAPTI
     Given Add Place Payload with "<name>" "<language>" "<address>"
     When User calls "AddPlaceAPI" with "Post" http request
@@ -12,6 +14,7 @@ Feature: Validating Place API's
     |BNS       |English   |E-3, 10no. stop|
     |Amado     |French    |E-2, 7no. stop |
 
+    @DeletePlace
     Scenario: Verify if delete place functionality is working
 
       Given DeletePlace Payload
